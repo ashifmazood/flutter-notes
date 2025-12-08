@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+
+class ColumnScreen extends StatelessWidget {
+  const ColumnScreen
+({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body:Column(
+        children: [
+          Text('bag'),Text('tag'),Text('bud'),Text('pow')
+        ],
+      )
+    );
+  }
+}
