@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   fluttertoast: ^9.0.0
   lottie: ^3.3.2
+  url_launcher: ^6.3.2
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -46,6 +48,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.14.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -88,3 +91,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+  flutter_launcher_icons: 
+   android:"launcher_icon"
+   ios:true
+   adaptive_icon_background:"#FFFFFF"
+   image_path:"assets/image/applogo-b.jpg"
+   min_sdk_android:21
