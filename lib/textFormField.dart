@@ -108,7 +108,7 @@ class _TextformfieldScreenState extends State<TextformfieldScreen> {
             Center(
               child: InkWell(
                 onTap: () {
-                  log(email.text);
+                (email.text);
                 },
                 child: Container(
                   height: 50,

@@ -23,6 +23,7 @@ import 'package:flutter_demo/lottie.dart';
 import 'package:flutter_demo/mechine_test1.0.dart';
 import 'package:flutter_demo/myfile.dart';
 import 'package:flutter_demo/radiobutton.dart';
+import 'package:flutter_demo/shared_prefrence.dart';
 import 'package:flutter_demo/singlechildscrolable.dart';
 import 'package:flutter_demo/stack.dart';
 import 'package:flutter_demo/stack_screen2.dart';
@@ -67,7 +68,8 @@ class MyApp extends StatelessWidget {
       ),
  
 
-      home:Ur_loncherSCreen(),
+      
+      home:SharedPrefrenceScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
