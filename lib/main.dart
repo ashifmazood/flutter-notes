@@ -18,8 +18,11 @@ import 'package:flutter_demo/foodscreen.dart';
 import 'package:flutter_demo/gridview.dart';
 import 'package:flutter_demo/gridview2.dart';
 import 'package:flutter_demo/home_page.dart';
+import 'package:flutter_demo/imagePicker.dart';
 import 'package:flutter_demo/listview.dart';
 import 'package:flutter_demo/lottie.dart';
+import 'package:flutter_demo/macheinText002.dart';
+import 'package:flutter_demo/mecheinBootombar.dart';
 import 'package:flutter_demo/mechine_test1.0.dart';
 import 'package:flutter_demo/myfile.dart';
 import 'package:flutter_demo/radiobutton.dart';
@@ -69,7 +72,7 @@ class MyApp extends StatelessWidget {
  
 
       
-      home:SharedPrefrenceScreen(),
+      home: BTM_MCHScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
