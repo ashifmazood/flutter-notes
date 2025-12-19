@@ -22,6 +22,9 @@ import 'package:flutter_demo/imagePicker.dart';
 import 'package:flutter_demo/listview.dart';
 import 'package:flutter_demo/lottie.dart';
 import 'package:flutter_demo/macheinText002.dart';
+import 'package:flutter_demo/mch333.1.dart';
+import 'package:flutter_demo/mch333.dart';
+import 'package:flutter_demo/mch333_screen1.dart';
 import 'package:flutter_demo/mecheinBootombar.dart';
 import 'package:flutter_demo/mechine_test1.0.dart';
 import 'package:flutter_demo/myfile.dart';
@@ -72,7 +75,7 @@ class MyApp extends StatelessWidget {
  
 
       
-      home: BTM_MCHScreen(),
+      home:Mch333(),
       debugShowCheckedModeBanner: false,
     );
   }

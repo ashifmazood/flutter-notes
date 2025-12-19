@@ -67,9 +67,9 @@ class _Macheintext002State extends State<Macheintext002> {
               ],
               ),
             ),
-        SizedBox(height:100,),
+        SizedBox(height:30,),
             Container(
-              height: 650,
+              height:MediaQuery.of(context).size.width*1.67,
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(50),topRight: Radius.circular(50)),
@@ -82,13 +82,13 @@ class _Macheintext002State extends State<Macheintext002> {
                      gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount:2,
                     crossAxisSpacing: 30,
-                    mainAxisSpacing: 30 ) ,
+                    mainAxisSpacing: 40) ,
                      itemBuilder:(context, index) {
                        final data = localdatamach002[index];
                        return 
                        
                        Container(
-                        height: 100,
+                        height: 200,
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
@@ -96,7 +96,7 @@ class _Macheintext002State extends State<Macheintext002> {
                         ),
                         child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            SizedBox(height: 10,),
+                            SizedBox(height: 1,),
                             Container(
                               height: 100,
                               width: 100,
@@ -106,6 +106,7 @@ class _Macheintext002State extends State<Macheintext002> {
                                 image: DecorationImage(image: NetworkImage(data['image']),fit: BoxFit.fill)
                               ),
                             ),
+                            SizedBox(height: 20,),
                             Text(data['data'],style: TextStyle(color: Colors.grey,fontSize: 15),)
                           ],
                         ),

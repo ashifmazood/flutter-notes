@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 class ImagepickerScreen extends StatefulWidget {
   const ImagepickerScreen({super.key});
@@ -8,6 +11,28 @@ class ImagepickerScreen extends StatefulWidget {
 }
 
 class _ImagepickerScreenState extends State<ImagepickerScreen> {
+  File?_image;
+  final ImagePicker picker = ImagePicker();
+
+
+//pick image from gallery or camera
+  void pickImage(ImageSource source)async{
+    final pickedFile = await picker.pickImage(source: source);
+
+    if (pickedFile !=null){
+      setState(() {
+        _image =File(pickedFile.path);
+      });
+    }
+  }
+
+  //Clear image selected
+
+  void clearimage(){
+    setState(() {
+      _image=null;
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,32 +50,43 @@ class _ImagepickerScreenState extends State<ImagepickerScreen> {
           children: [
             CircleAvatar(
               radius: 200,
-              child: Icon(Icons.photo_camera_front,size:120 ,),
+              child:  _image != null?Image.file(_image!)
+              :const Icon(Icons.person),
             ),
 
             SizedBox(height: 50,),
         
-            Container(
-              height: 50,
-              width: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-        
+            InkWell(
+              onTap:() {
+                 pickImage(ImageSource.gallery);
+              },
+              child: Container(
+                height: 50,
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blue,
+                      
+                ),
+                child: Center(child: Text('Gallery',style: TextStyle(color: Colors.black,fontSize: 20),)),
               ),
-              child: Center(child: Text('image',style: TextStyle(color: Colors.black,fontSize: 20),)),
             ),
             SizedBox(height: 50,),
-             Container(
-              height: 50,
-              width: 150,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.blue,
-        
-              ),
-              child: Center(child: Text('camera',style: TextStyle(color: Colors.black,fontSize: 20),)),
-            )
+             InkWell(
+              onTap: () {
+                pickImage(ImageSource.camera);
+              },
+               child: Container(
+                height: 50,
+                width: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blue,
+                       
+                ),
+                child: Center(child: Text('camera',style: TextStyle(color: Colors.black,fontSize: 20),)),
+                           ),
+             )
           
             
           ],

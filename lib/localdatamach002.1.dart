@@ -29,12 +29,12 @@ List localdatamach002_1=[
     'salary':'45rs',
     'star':''
   },
-  // {
-  //   'image':'',
-  //   'name':'',
-  //   'salary':'',
-  //   'star':''
-  // },
+  {
+    'image':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNjkaQHLXfokbl1GiKnXl6v7GNgnG8rb3JA&s',
+    'name':'Chin Cha',
+    'salary':'67rs',
+    'star':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQe9BFmiZcvWcV3g4YuHUGchlYe0s-XZm7Q&s'
+  },
   // {
   //   'image':'',
   //   'name':'',
